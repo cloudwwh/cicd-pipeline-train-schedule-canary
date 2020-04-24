@@ -1,28 +1,8 @@
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@cloudwwh 
-linuxacademy
-/
-cicd-pipeline-train-schedule-canary
-6
-4701
- Code Issues 0 Pull requests 4 Actions Projects 0 Wiki Security 0 Insights
-cicd-pipeline-train-schedule-canary/Jenkinsfile
-@whboyd whboyd add canary deploy to pipeline
-1c8025c on 1 Jun 2018
-79 lines (79 sloc)  2.29 KB
-  
 pipeline {
     agent any
     environment {
         //be sure to replace "willbla" with your own Docker Hub username
-        DOCKER_IMAGE_NAME = "willbla/train-schedule"
+        DOCKER_IMAGE_NAME = "cloudwwh/train-schedule"
     }
     stages {
         stage('Build') {
